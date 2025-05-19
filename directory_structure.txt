@@ -1,0 +1,215 @@
+res://
+├── assets/
+│   ├── audio/
+│   │   ├── narration/
+│   │   │   ├── level_1/
+│   │   │   ├── level_2/
+│   │   │   └── level_3/
+│   │   ├── sfx/
+│   │   └── music/
+│   ├── images/
+│   │   ├── ui/
+│   │   │   ├── buttons/
+│   │   │   ├── icons/
+│   │   │   └── backgrounds/
+│   │   ├── biology/
+│   │   │   ├── cells/
+│   │   │   ├── organisms/
+│   │   │   ├── chromosomes/
+│   │   │   └── anatomy/
+│   │   └── animations/
+│   │       ├── binary_fission/
+│   │       ├── mitosis/
+│   │       └── sexual_reproduction/
+│   └── fonts/
+│
+├── scenes/
+│   ├── main/
+│   │   ├── Main.tscn
+│   │   └── MainMenu.tscn
+│   ├── ui/
+│   │   ├── components/
+│   │   │   ├── ReadingLevelSelector.tscn
+│   │   │   ├── ProgressIndicator.tscn
+│   │   │   ├── AudioController.tscn
+│   │   │   ├── InteractiveButton.tscn
+│   │   │   └── DefinitionPopup.tscn
+│   │   ├── dialogs/
+│   │   │   ├── SettingsDialog.tscn
+│   │   │   ├── QuizDialog.tscn
+│   │   │   └── HelpDialog.tscn
+│   │   └── overlays/
+│   │       ├── LoadingScreen.tscn
+│   │       └── TransitionOverlay.tscn
+│   ├── modules/
+│   │   ├── binary_fission/
+│   │   │   ├── BinaryFissionMain.tscn
+│   │   │   ├── components/
+│   │   │   │   ├── SingleCell.tscn
+│   │   │   │   ├── DNAReplication.tscn
+│   │   │   │   └── CellDivision.tscn
+│   │   │   └── animations/
+│   │   │       ├── FissionSequence.tscn
+│   │   │       └── DNAAnimation.tscn
+│   │   ├── mitosis/
+│   │   │   ├── MitosisMain.tscn
+│   │   │   ├── components/
+│   │   │   │   ├── Chromosome.tscn
+│   │   │   │   ├── CellNucleus.tscn
+│   │   │   │   ├── Spindle.tscn
+│   │   │   │   └── CellMembrane.tscn
+│   │   │   └── phases/
+│   │   │       ├── Interphase.tscn
+│   │   │       ├── Prophase.tscn
+│   │   │       ├── Metaphase.tscn
+│   │   │       ├── Anaphase.tscn
+│   │   │       ├── Telophase.tscn
+│   │   │       └── Cytokinesis.tscn
+│   │   └── sexual_reproduction/
+│   │       ├── SexualReproductionMain.tscn
+│   │       ├── common/
+│   │       │   ├── Meiosis.tscn
+│   │       │   ├── Gamete.tscn
+│   │       │   ├── Fertilization.tscn
+│   │       │   └── EmbryonicDevelopment.tscn
+│   │       ├── amphibian/
+│   │       │   ├── AmphibianMain.tscn
+│   │       │   ├── FrogAnatomy.tscn
+│   │       │   ├── ExternalFertilization.tscn
+│   │       │   ├── TadpoleDevelopment.tscn
+│   │       │   └── Metamorphosis.tscn
+│   │       ├── bird/
+│   │       │   ├── BirdMain.tscn
+│   │       │   ├── BirdAnatomy.tscn
+│   │       │   ├── EggFormation.tscn
+│   │       │   ├── Incubation.tscn
+│   │       │   └── Hatching.tscn
+│   │       └── human/
+│   │           ├── HumanMain.tscn
+│   │           ├── HumanAnatomy.tscn
+│   │           ├── OvulationCycle.tscn
+│   │           ├── Implantation.tscn
+│   │           ├── FetalDevelopment.tscn
+│   │           └── Birth.tscn
+│   ├── comparison/
+│   │   ├── ComparisonMain.tscn
+│   │   ├── SideBySideView.tscn
+│   │   └── TimelineComparison.tscn
+│   └── assessment/
+│       ├── QuizMain.tscn
+│       ├── questions/
+│       │   ├── MultipleChoice.tscn
+│       │   ├── DragAndDrop.tscn
+│       │   ├── SequenceOrdering.tscn
+│       │   └── Labeling.tscn
+│       └── results/
+│           ├── ScoreDisplay.tscn
+│           └── ProgressReport.tscn
+│
+├── scripts/
+│   ├── core/
+│   │   ├── GameManager.gd
+│   │   ├── SceneTransition.gd
+│   │   ├── AudioManager.gd
+│   │   ├── DataManager.gd
+│   │   └── ProgressTracker.gd
+│   ├── ui/
+│   │   ├── ReadingLevelManager.gd
+│   │   ├── AccessibilityManager.gd
+│   │   ├── MenuController.gd
+│   │   ├── SettingsController.gd
+│   │   └── UIAnimations.gd
+│   ├── biology/
+│   │   ├── base/
+│   │   │   ├── BiologicalProcess.gd
+│   │   │   ├── Cell.gd
+│   │   │   ├── Chromosome.gd
+│   │   │   └── Organism.gd
+│   │   ├── reproduction/
+│   │   │   ├── BinaryFission.gd
+│   │   │   ├── Mitosis.gd
+│   │   │   ├── Meiosis.gd
+│   │   │   └── Fertilization.gd
+│   │   ├── gametes/
+│   │   │   ├── Sperm.gd
+│   │   │   ├── Ovum.gd
+│   │   │   └── GameteDevelopment.gd
+│   │   └── development/
+│   │       ├── Embryo.gd
+│   │       ├── EmbryonicStage.gd
+│   │       ├── FetalDevelopment.gd
+│   │       └── OrganismGrowth.gd
+│   ├── modules/
+│   │   ├── binary_fission/
+│   │   │   ├── BinaryFissionController.gd
+│   │   │   ├── SingleCellController.gd
+│   │   │   └── DNAReplicationAnimator.gd
+│   │   ├── mitosis/
+│   │   │   ├── MitosisController.gd
+│   │   │   ├── ChromosomeController.gd
+│   │   │   ├── PhaseManager.gd
+│   │   │   └── SpindleController.gd
+│   │   └── sexual_reproduction/
+│   │       ├── SexualReproductionController.gd
+│   │       ├── amphibian/
+│   │       │   ├── AmphibianController.gd
+│   │       │   ├── SpawningController.gd
+│   │       │   └── MetamorphosisController.gd
+│   │       ├── bird/
+│   │       │   ├── BirdController.gd
+│   │       │   ├── EggFormationController.gd
+│   │       │   └── IncubationController.gd
+│   │       └── human/
+│   │           ├── HumanController.gd
+│   │           ├── MenstrualCycleController.gd
+│   │           ├── PregnancyController.gd
+│   │           └── BirthController.gd
+│   ├── assessment/
+│   │   ├── QuizManager.gd
+│   │   ├── QuestionBank.gd
+│   │   ├── ScoreCalculator.gd
+│   │   └── ProgressAssessment.gd
+│   ├── animation/
+│   │   ├── BiologyAnimator.gd
+│   │   ├── SequenceAnimator.gd
+│   │   ├── TransitionAnimator.gd
+│   │   └── InteractiveAnimator.gd
+│   └── utilities/
+│       ├── Constants.gd
+│       ├── Enums.gd
+│       ├── Signals.gd
+│       ├── MathUtils.gd
+│       └── TextUtils.gd
+│
+├── data/
+│   ├── content/
+│   │   ├── text/
+│   │   │   ├── level_1/
+│   │   │   ├── level_2/
+│   │   │   └── level_3/
+│   │   ├── questions/
+│   │   │   ├── binary_fission.json
+│   │   │   ├── mitosis.json
+│   │   │   ├── amphibian.json
+│   │   │   ├── bird.json
+│   │   │   └── human.json
+│   │   └── definitions/
+│   │       ├── glossary_level_1.json
+│   │       ├── glossary_level_2.json
+│   │       └── glossary_level_3.json
+│   ├── settings/
+│   │   ├── default_settings.json
+│   │   └── user_preferences.json
+│   └── progress/
+│       ├── completion_data.json
+│       └── achievement_data.json
+│
+├── themes/
+│   ├── default_theme.tres
+│   ├── high_contrast_theme.tres
+│   └── large_text_theme.tres
+│
+└── exports/
+    ├── windows/
+    ├── macos/
+    └── web/

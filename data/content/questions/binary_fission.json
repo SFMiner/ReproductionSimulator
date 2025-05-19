@@ -1,0 +1,73 @@
+[
+  {
+    "id": "bf_q1",
+    "type": "multiple_choice",
+    "question": "What type of organisms use binary fission to reproduce?",
+    "level": 1,
+    "options": [
+      "Single-celled organisms like bacteria",
+      "Plants like trees",
+      "Animals like dogs",
+      "Humans"
+    ],
+    "correct_answer": 0,
+    "explanation": "Binary fission is used by single-celled organisms like bacteria to make copies of themselves."
+  },
+  {
+    "id": "bf_q2",
+    "type": "multiple_choice",
+    "question": "What happens first in binary fission?",
+    "level": 1,
+    "options": [
+      "The cell divides into two",
+      "The DNA is copied",
+      "The two new cells grow",
+      "The cell shrinks"
+    ],
+    "correct_answer": 1,
+    "explanation": "The first important step in binary fission is for the cell to copy its DNA so each new cell will have a complete set of instructions."
+  },
+  {
+    "id": "bf_q3",
+    "type": "multiple_choice",
+    "question": "How many cells are created at the end of binary fission?",
+    "level": 1,
+    "options": [
+      "One",
+      "Two",
+      "Three",
+      "Four"
+    ],
+    "correct_answer": 1,
+    "explanation": "In binary fission, one cell divides to become two identical cells."
+  },
+  {
+    "id": "bf_q4",
+    "type": "ordering",
+    "question": "Put the steps of binary fission in the correct order:",
+    "level": 2,
+    "items": [
+      "Cell preparation",
+      "DNA replication",
+      "Cell elongation",
+      "Cell division",
+      "Growth phase"
+    ],
+    "correct_order": [0, 1, 2, 3, 4],
+    "explanation": "Binary fission follows these steps in order: the cell prepares, copies its DNA, elongates to make room, divides into two cells, and finally the new cells grow to full size."
+  },
+  {
+    "id": "bf_q5",
+    "type": "multiple_choice",
+    "question": "What gets copied during DNA replication?",
+    "level": 2,
+    "options": [
+      "The cell membrane",
+      "The cell's genetic material",
+      "The cytoplasm",
+      "The organelles"
+    ],
+    "correct_answer": 1,
+    "explanation": "During DNA replication, the cell copies its genetic material (DNA) so each new cell will have the complete instructions it needs."
+  }
+]

@@ -1,0 +1,320 @@
+[gd_scene load_steps=2 format=3 uid="uid://cp4mcgftqb8qg"]
+
+[ext_resource type="Script" path="res://scripts/ui/MenuController.gd" id="1_4i2no"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4i2no")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.133333, 0.270588, 0.380392, 1)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -275.0
+offset_top = 50.0
+offset_right = 275.0
+offset_bottom = 150.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 36
+text = "Life's Journey: A Reproduction Simulator"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Subtitle" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_top = 150.0
+offset_right = 250.0
+offset_bottom = 200.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 16
+text = "Educational Simulation / Interactive Learning Tool"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -150.0
+offset_right = 200.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="ExploreButton" type="Button" parent="ButtonContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Explore Mode"
+
+[node name="GuidedLearningButton" type="Button" parent="ButtonContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Guided Learning"
+
+[node name="CompareButton" type="Button" parent="ButtonContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Compare & Contrast"
+
+[node name="QuizButton" type="Button" parent="ButtonContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Quiz Mode"
+
+[node name="SettingsButton" type="Button" parent="ButtonContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Settings"
+
+[node name="ModuleSelectionDialog" type="Window" parent="."]
+title = "Select Module"
+initial_position = 2
+size = Vector2i(500, 400)
+visible = false
+
+[node name="ModuleContainer" type="VBoxContainer" parent="ModuleSelectionDialog"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="ModuleSelectionDialog/ModuleContainer"]
+layout_mode = 2
+text = "Select a reproduction module to explore:"
+horizontal_alignment = 1
+
+[node name="BinaryFissionButton" type="Button" parent="ModuleSelectionDialog/ModuleContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Binary Fission
+(Single-celled organisms)"
+
+[node name="MitosisButton" type="Button" parent="ModuleSelectionDialog/ModuleContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Mitosis
+(Asexual reproduction in multicellular organisms)"
+
+[node name="SexualLabel" type="Label" parent="ModuleSelectionDialog/ModuleContainer"]
+layout_mode = 2
+text = "Sexual Reproduction:"
+horizontal_alignment = 1
+
+[node name="AmphibianButton" type="Button" parent="ModuleSelectionDialog/ModuleContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Amphibians - Frogs
+(External fertilization)"
+
+[node name="BirdButton" type="Button" parent="ModuleSelectionDialog/ModuleContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Birds - Chickens
+(Internal oviparous)"
+
+[node name="HumanButton" type="Button" parent="ModuleSelectionDialog/ModuleContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Mammals - Humans
+(Internal viviparous)"
+
+[node name="CancelButton" type="Button" parent="ModuleSelectionDialog/ModuleContainer"]
+layout_mode = 2
+text = "Cancel"
+
+[node name="SettingsDialog" type="Window" parent="."]
+title = "Settings"
+initial_position = 2
+size = Vector2i(500, 400)
+visible = false
+
+[node name="SettingsContainer" type="VBoxContainer" parent="SettingsDialog"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="ReadingLevelSection" type="VBoxContainer" parent="SettingsDialog/SettingsContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="SettingsDialog/SettingsContainer/ReadingLevelSection"]
+layout_mode = 2
+text = "Reading Level:"
+horizontal_alignment = 1
+
+[node name="ReadingLevelContainer" type="HBoxContainer" parent="SettingsDialog/SettingsContainer/ReadingLevelSection"]
+layout_mode = 2
+alignment = 1
+
+[node name="Level1Button" type="Button" parent="SettingsDialog/SettingsContainer/ReadingLevelSection/ReadingLevelContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+button_pressed = true
+text = "Level 1
+(Ages 6-7)"
+
+[node name="Level2Button" type="Button" parent="SettingsDialog/SettingsContainer/ReadingLevelSection/ReadingLevelContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "Level 2
+(Ages 8-10)"
+
+[node name="Level3Button" type="Button" parent="SettingsDialog/SettingsContainer/ReadingLevelSection/ReadingLevelContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "Level 3
+(Ages 11+)"
+
+[node name="Description" type="Label" parent="SettingsDialog/SettingsContainer/ReadingLevelSection"]
+layout_mode = 2
+text = "Level 1: Simple words, picture-heavy, basic concepts"
+horizontal_alignment = 1
+
+[node name="AudioSection" type="VBoxContainer" parent="SettingsDialog/SettingsContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="SettingsDialog/SettingsContainer/AudioSection"]
+layout_mode = 2
+text = "Audio Settings:"
+horizontal_alignment = 1
+
+[node name="AudioGrid" type="GridContainer" parent="SettingsDialog/SettingsContainer/AudioSection"]
+layout_mode = 2
+columns = 2
+
+[node name="MasterLabel" type="Label" parent="SettingsDialog/SettingsContainer/AudioSection/AudioGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Master Volume:"
+
+[node name="MasterCheckBox" type="CheckBox" parent="SettingsDialog/SettingsContainer/AudioSection/AudioGrid"]
+layout_mode = 2
+button_pressed = true
+text = "Enabled"
+
+[node name="NarrationLabel" type="Label" parent="SettingsDialog/SettingsContainer/AudioSection/AudioGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Narration:"
+
+[node name="NarrationCheckBox" type="CheckBox" parent="SettingsDialog/SettingsContainer/AudioSection/AudioGrid"]
+layout_mode = 2
+button_pressed = true
+text = "Enabled"
+
+[node name="SFXLabel" type="Label" parent="SettingsDialog/SettingsContainer/AudioSection/AudioGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Sound Effects:"
+
+[node name="SFXCheckBox" type="CheckBox" parent="SettingsDialog/SettingsContainer/AudioSection/AudioGrid"]
+layout_mode = 2
+button_pressed = true
+text = "Enabled"
+
+[node name="MusicLabel" type="Label" parent="SettingsDialog/SettingsContainer/AudioSection/AudioGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Background Music:"
+
+[node name="MusicCheckBox" type="CheckBox" parent="SettingsDialog/SettingsContainer/AudioSection/AudioGrid"]
+layout_mode = 2
+button_pressed = true
+text = "Enabled"
+
+[node name="AccessibilitySection" type="VBoxContainer" parent="SettingsDialog/SettingsContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="SettingsDialog/SettingsContainer/AccessibilitySection"]
+layout_mode = 2
+text = "Accessibility:"
+horizontal_alignment = 1
+
+[node name="AccessibilityGrid" type="GridContainer" parent="SettingsDialog/SettingsContainer/AccessibilitySection"]
+layout_mode = 2
+columns = 2
+
+[node name="SubtitlesLabel" type="Label" parent="SettingsDialog/SettingsContainer/AccessibilitySection/AccessibilityGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Subtitles:"
+
+[node name="SubtitlesCheckBox" type="CheckBox" parent="SettingsDialog/SettingsContainer/AccessibilitySection/AccessibilityGrid"]
+layout_mode = 2
+button_pressed = true
+text = "Enabled"
+
+[node name="HighContrastLabel" type="Label" parent="SettingsDialog/SettingsContainer/AccessibilitySection/AccessibilityGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "High Contrast Mode:"
+
+[node name="HighContrastCheckBox" type="CheckBox" parent="SettingsDialog/SettingsContainer/AccessibilitySection/AccessibilityGrid"]
+layout_mode = 2
+text = "Enabled"
+
+[node name="CloseButton" type="Button" parent="SettingsDialog/SettingsContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+text = "Save and Close"
+
+[node name="Version" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -30.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "v0.1.0"
+horizontal_alignment = 2

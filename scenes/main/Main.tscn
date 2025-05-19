@@ -1,0 +1,77 @@
+[gd_scene load_steps=9 format=3 uid="uid://drxsklq3nrrvd"]
+
+[ext_resource type="Script" path="res://scripts/core/GameManager.gd" id="1_jscx4"]
+[ext_resource type="Script" path="res://scripts/core/DataManager.gd" id="2_t7vsa"]
+[ext_resource type="Script" path="res://scripts/core/AudioManager.gd" id="3_bjgc2"]
+[ext_resource type="Script" path="res://scripts/core/ProgressTracker.gd" id="4_8kel0"]
+[ext_resource type="Script" path="res://scripts/core/SceneTransition.gd" id="5_6uf1i"]
+
+[sub_resource type="Animation" id="Animation_kgb30"]
+resource_name = "fade_from_black"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_4qf50"]
+resource_name = "fade_to_black"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uf52q"]
+_data = {
+"fade_from_black": SubResource("Animation_kgb30"),
+"fade_to_black": SubResource("Animation_4qf50")
+}
+
+[node name="Main" type="Node"]
+script = ExtResource("1_jscx4")
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_jscx4")
+
+[node name="DataManager" type="Node" parent="GameManager"]
+script = ExtResource("2_t7vsa")
+
+[node name="AudioManager" type="Node" parent="GameManager"]
+script = ExtResource("3_bjgc2")
+
+[node name="ProgressTracker" type="Node" parent="GameManager"]
+script = ExtResource("4_8kel0")
+
+[node name="SceneTransition" type="CanvasLayer" parent="."]
+layer = 10
+script = ExtResource("5_6uf1i")
+
+[node name="ColorRect" type="ColorRect" parent="SceneTransition"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SceneTransition"]
+libraries = {
+"": SubResource("AnimationLibrary_uf52q")
+}

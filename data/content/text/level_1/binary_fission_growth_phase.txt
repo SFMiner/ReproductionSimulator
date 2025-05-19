@@ -1,0 +1,1 @@
+The two new cells grow bigger until they are the same size as the original cell. Now instead of one cell, we have two identical cells!
