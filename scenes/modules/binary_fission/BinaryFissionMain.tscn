@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dsujucr0cxomv"]
 
-[ext_resource type="Script" path="res://scripts/modules/binary_fission/BinaryFissionController.gd" id="1_gvjbh"]
+[ext_resource type="Script" uid="uid://bdtvrhprlc3co" path="res://scripts/modules/binary_fission/BinaryFissionController.gd" id="1_gvjbh"]
 
 [node name="BinaryFissionMain" type="Control"]
 layout_mode = 3

@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://drxsklq3nrrvd"]
 
-[ext_resource type="Script" path="res://scripts/core/GameManager.gd" id="1_jscx4"]
-[ext_resource type="Script" path="res://scripts/core/DataManager.gd" id="2_t7vsa"]
-[ext_resource type="Script" path="res://scripts/core/AudioManager.gd" id="3_bjgc2"]
-[ext_resource type="Script" path="res://scripts/core/ProgressTracker.gd" id="4_8kel0"]
-[ext_resource type="Script" path="res://scripts/core/SceneTransition.gd" id="5_6uf1i"]
+[ext_resource type="Script" uid="uid://614706lpcxil" path="res://scripts/core/GameManager.gd" id="1_jscx4"]
+[ext_resource type="Script" uid="uid://dvvt8apxnxshh" path="res://scripts/core/DataManager.gd" id="2_t7vsa"]
+[ext_resource type="Script" uid="uid://7prk0rf4aor2" path="res://scripts/core/AudioManager.gd" id="3_bjgc2"]
+[ext_resource type="Script" uid="uid://b8pnhlhiel7bc" path="res://scripts/core/ProgressTracker.gd" id="4_8kel0"]
+[ext_resource type="Script" uid="uid://di2qy1te525ru" path="res://scripts/core/SceneTransition.gd" id="5_6uf1i"]
 
 [sub_resource type="Animation" id="Animation_kgb30"]
 resource_name = "fade_from_black"
@@ -40,8 +40,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uf52q"]
 _data = {
-"fade_from_black": SubResource("Animation_kgb30"),
-"fade_to_black": SubResource("Animation_4qf50")
+&"fade_from_black": SubResource("Animation_kgb30"),
+&"fade_to_black": SubResource("Animation_4qf50")
 }
 
 [node name="Main" type="Node"]
@@ -73,5 +73,5 @@ color = Color(0, 0, 0, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SceneTransition"]
 libraries = {
-"": SubResource("AnimationLibrary_uf52q")
+&"": SubResource("AnimationLibrary_uf52q")
 }
